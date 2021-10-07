@@ -60,7 +60,7 @@ const [symbol, setSymbol] = useState("$"); // Currency Symbol
       obj["id"] = new Date().getTime() + Math.random();
       obj["name"] = cn;
       obj["month"] = item;
-      obj["points"] = symbol+points;
+      obj["points"] = points;
       obj["txn"] = symbol+txn;
       customerTotalData.push(obj);
     });
@@ -128,8 +128,8 @@ const [symbol, setSymbol] = useState("$"); // Currency Symbol
           return(<tr>
             <td>{e.date}</td>
             <td>{e.name}</td>
-            <td>{e.monthName}</td>
-            <td>${e.txn}</td>  
+            <td>${e.txn}</td>
+            <td>{e.points}</td>  
             </tr>)
         })}
         </tbody>
